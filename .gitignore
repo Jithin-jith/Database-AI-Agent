@@ -130,6 +130,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.database_agent
 env/
 venv/
 ENV/
