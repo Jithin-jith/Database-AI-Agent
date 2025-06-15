@@ -56,6 +56,15 @@ if uploaded_file is not None:
         df=df,
         verbose=True,
     )
+    
+    if st.button("Explain Data"):
+        data_query = "Explain the data in the csv. Explain what the dataset is about. Display the column names etc"
+        data_explain = agent.invoke(data_query)
+        st.write("### Explanation")
+        st.markdown(data_explain["output"])
+    else:
+        pass
+    
 
     # User input for the question
     st.write("### Ask a Question")
